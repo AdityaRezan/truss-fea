@@ -39,18 +39,3 @@ The deformed-shape plot is textbook mechanics made visible: bottom chord in tens
 midspan. Safety factor 1.39 at 3 m height is below the ~1.67 codes typically demand,
 and the sweep shows why raising the truss helps: taller trusses give the chord
 couple a longer lever arm, so chord forces drop roughly as 1/h.
-
-## Questions this project can answer
-
-1. Why does a truss element have a 4x4 stiffness matrix?
-   Two nodes x two DOFs each. The matrix is rank 1 (outer product) because a bar
-   resists exactly one deformation mode: axial stretch.
-
-2. Why does peak stress fall as truss height increases?
-   Bending moment is resisted by the chord force couple: M = F x h. For fixed M,
-   F scales as 1/h. Diagonals see load geometry changes too, but chords dominate.
-
-3. Why is the pinned + roller support combination used?
-   Pinned fixes both translations; roller fixes only vertical. This makes the
-   structure statically determinate externally and lets the span expand thermally
-   without inducing stress - exactly how real bridge bearings work.
